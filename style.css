@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+nav{
+  width: 100%;
+}
+.navbar{
+    background-color:black;
+    height: 10%;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    color: aqua;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+#spotifylogo{
+  padding-left: 1%;
+    height: 56px;
+    width:3.8%;
+}
+.logotext{
+    font-weight: 800;
+}
+.favourite{
+    margin-left: 40px;
+}
+.favourite:hover{
+  cursor: pointer;
+}
+#profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.nav input{
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    border-radius:20px;
+    font-size: 20px;
+    margin-left: 550px;
+    text-indent: 15px;
+    padding-right: 0%;
+}
+input::placeholder{
+    text-align: center;
+}
+
+#bell{
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+#bell,#mic:hover{
+  cursor: pointer;
+}
+#profile{
+    display: inline-block;
+    margin-left: 30px;
+}
+.main {
+    width: 100vw;
+    height: 100vh; /* Set the height to 100vh */
+    padding-left: 20px;
+    background-color: darkslateblue;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    border: 2px rgb(251, 253, 252) solid;
+  }
+  
+.wrapper-right {
+    width: 60%;
+    height: 100vh;
+    overflow-y: scroll;
+    border-right: 2px solid wheat; /* Add border to separate left and right sections */
+}
+
+.left-wrapper {
+    width: 40%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.albums {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: aqua darkslategray;
+}
+
+.albums img:hover{
+  position: relative;
+  top: -8px;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.albums::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; 
+}
+
+.albums::-webkit-scrollbar-thumb {
+    background-color: darkslateblue;
+    border-radius: 4px;
+}
+
+.albums::-webkit-scrollbar-track {
+    background-color: darkslateblue;
+}
+
+
+.albums:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(4, 3, 14);
+}
+
+.albums:hover::-webkit-scrollbar-track {
+    background-color: darkslategray;
+}
+
+
+.main img {
+    padding-top: 20px;
+    height: 30vh;
+    width: 200px;
+}
+
+.Latest-Release{
+    position: relative;
+    width:100%;    
+}
+.Latest-Release img{
+    height: 12vh;
+    width: 6vw;
+}
+
+.heading{
+    font-size: 30px;
+    width:100% ;
+    color: rgb(235, 214, 95);
+    white-space:nowrap;
+}
+
+/* Add this CSS code to your existing stylesheet */
+
+.songs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    color: beige;
+  }
+  
+  .text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .song1 {
+    grid-area: auto; 
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ellipsis{
+      padding-left: 120px;
+      font-size: larger;
+      padding-top: 40px;
+  }
+  .song1 img {
+    height: 90%;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  
+.image-container {
+  position: relative; 
+  width: 100px; 
+  height: 100px;
+  overflow: hidden; 
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.1s ease-in-out; 
+}
+
+.icon-container {
+  position: absolute; 
+  top: 60%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+  
+}
+
+
+.image-container:hover img {
+  cursor: pointer;
+  opacity: 0.4; 
+}
+.icon-container{
+  cursor: pointer;
+}
+.image-container:hover .icon-container {
+  opacity: 1; 
+}
+
+
+  
+  .text1{
+    padding-left: 25px;
+  }
+
+  
+  .text1 .song-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white; 
+  }
+  
+  .text1 .dot {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .date, .duration {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+  .Popular{
+    width: 100%;
+    height: 30vh;
+    border-radius: 10px;
+    
+  }
+  .heading-popular{
+    font-size: 30px;
+    white-space: nowrap;
+    color: rgb(235, 214, 95);
+    
+  }
+  .one{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+  .artists{
+    display:flex;
+    flex-direction: column;
+    padding-right: 30px;
+  }
+  .artist-img img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .artist-name{
+    font-size: 20px;
+    color: beige;
+    text-align: center;
+  }
+.one::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; 
+}
+
+.one::-webkit-scrollbar-thumb {
+    background-color: darkslateblue;
+    border-radius: 4px;
+}
+
+.one::-webkit-scrollbar-track {
+    background-color: darkslateblue;
+}
+
+
+.one:hover::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+}
+
+.one:hover::-webkit-scrollbar-track {
+    background-color: darkslategray;
+}
+
+.genere{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding-top: 10px;
+}
+
+.single{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding: 2px 10px;
+}
+.genere-img img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.single-special {
+  
+  position: sticky;
+  left: 0; /* Stick to the left side */
+  z-index: 100;
+  width: 90px; /* Set a fixed width to maintain space */
+  height: 120px; /* Set a fixed height to maintain space */
+  background-color: darkslateblue;
+}
+.genere::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; 
+}
+
+.genere::-webkit-scrollbar-thumb {
+  background-color: darkslateblue;
+  border-radius: 4px;
+}
+
+.genere::-webkit-scrollbar-track {
+  background-color: darkslateblue;
+}
+
+
+.genere:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(141, 128, 212);
+}
+
+.genere:hover::-webkit-scrollbar-track {
+  background-color: darkslategray;
+}
+
+.heading-english{
+  font-size: 30px;
+  white-space: nowrap;
+  color: rgb(235, 214, 95);
+}
+.songs-container{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.song-img img{
+  width: 8vw;
+  height: 14vh;
+}
+.one-song{
+  padding-right: 10px;
+}
+.song-name{
+  font-size: 20px;
+  color: bisque;
+}
+.heading-hindi{
+  font-size: 30px;
+  white-space: nowrap;
+  color: rgb(235, 214, 95);
+}
+.hindi-songs-container{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.single-img img{
+  width: 8vw;
+  height: 14vh;
+}
+.single{
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+.music-name{
+  font-size: 20px;
+  color: bisque;
+}
+
+.songs-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; 
+}
+
+.songs-container::-webkit-scrollbar-thumb {
+  background-color: darkslateblue;
+  border-radius: 4px;
+}
+
+.songs-container::-webkit-scrollbar-track {
+  background-color: darkslateblue;
+}
+
+
+.songs-container:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(141, 128, 212);
+}
+
+.songs-container:hover::-webkit-scrollbar-track {
+  background-color: darkslategray;
+}
+
+.hindi-songs-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; 
+}
+
+.hindi-songs-container::-webkit-scrollbar-thumb {
+  background-color: darkslateblue;
+  border-radius: 4px;
+}
+
+.hindi-songs-container::-webkit-scrollbar-track {
+  background-color: darkslateblue;
+}
+
+
+.hindi-songs-container:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(141, 128, 212);
+}
+
+.hindi-songs-container:hover::-webkit-scrollbar-track {
+  background-color: darkslategray;
+}
+.left-wrapper{
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+}
+.heading-left{
+  display: flex;
+  flex-direction: row;
+}
+.lf-head{
+  color: darkkhaki;
+  font-size: 2.0vw;
+  padding-top: 2%;
+  font-weight: 700;
+}
+
+.rg-head{
+  color: rgb(81, 122, 168);
+  font-size: 1.5vw;
+  padding-top: 3%;
+  font-weight: 400;
+  padding-left: 60%;
+}
+.one-row{
+  display:flex;
+  justify-content :start;
+  color: beige;
+  align-items: center;
+  
+}
+.one-row img{
+  height:70%;
+  width:15%
+}
+.one-row img:hover{
+  cursor: pointer;
+}
+.id_no{
+  padding-right: 18px;
+   margin-left: 8%;
+}
+.informa{
+  padding-left: 20px;
+}
+.like{
+  padding-left: 27%;
+}
+.like i:hover{
+  cursor: pointer;
+}
