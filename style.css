@@ -266,6 +266,7 @@ input::placeholder{
     
   }
   .one{
+    margin-bottom: 5px;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
@@ -286,8 +287,8 @@ input::placeholder{
     text-align: center;
   }
 .one::-webkit-scrollbar {
-    width: 8px;
-    height: 8px; 
+    width: 10px;
+    height: 10px; 
 }
 
 .one::-webkit-scrollbar-thumb {
@@ -318,6 +319,7 @@ input::placeholder{
 }
 
 .single{
+  margin-top: 20px;
   display: flex;
   position: relative;
   flex-direction: row;
@@ -334,13 +336,14 @@ input::placeholder{
   position: sticky;
   left: 0; /* Stick to the left side */
   z-index: 100;
+  margin-top: 20px;
   width: 90px; /* Set a fixed width to maintain space */
   height: 120px; /* Set a fixed height to maintain space */
   background-color: darkslateblue;
 }
 .genere::-webkit-scrollbar {
-  width: 8px;
-  height: 8px; 
+  width: 10px;
+  height: 10px; 
 }
 
 .genere::-webkit-scrollbar-thumb {
@@ -451,53 +454,70 @@ input::placeholder{
 .hindi-songs-container:hover::-webkit-scrollbar-track {
   background-color: darkslategray;
 }
-.left-wrapper{
+.left-wrapper {
   display: flex;
   flex-direction: column;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
-.heading-left{
+
+.heading-left {
   display: flex;
   flex-direction: row;
 }
-.lf-head{
+
+.lf-head {
   color: darkkhaki;
   font-size: 2.0vw;
   padding-top: 2%;
   font-weight: 700;
 }
 
-.rg-head{
+.rg-head {
   color: rgb(81, 122, 168);
   font-size: 1.5vw;
   padding-top: 3%;
   font-weight: 400;
   padding-left: 60%;
 }
-.one-row{
-  display:flex;
-  justify-content :start;
+
+.one-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
   color: beige;
   align-items: center;
-  
+  margin-bottom: 10px; /* Add margin for spacing between rows */
+  width: 100%; /* Ensure the row doesn't exceed the available width */
+  box-sizing: border-box; /* Include padding and borders in width calculations */
 }
-.one-row img{
-  height:70%;
-  width:15%
+
+.one-row img {
+  height: 70%;
+  width: 15%;
+  margin-right: 10px; /* Add margin for spacing between image and text */
 }
-.one-row img:hover{
+
+.one-row img:hover {
   cursor: pointer;
 }
-.id_no{
+
+.id_no {
   padding-right: 18px;
-   margin-left: 8%;
+  margin-left: 8%;
 }
-.informa{
-  padding-left: 20px;
+
+.informa {
+  flex: 0.8;/* Allow the informa div to take remaining space */
+  padding-left: 60px;
+  padding-top: 8px;
 }
-.like{
-  padding-left: 27%;
+
+.like {
+  padding-left: 10px; /* Adjust the value as needed for spacing */
 }
-.like i:hover{
+
+.like i:hover {
   cursor: pointer;
 }
+
+
+
